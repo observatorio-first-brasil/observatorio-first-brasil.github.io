@@ -1,0 +1,72 @@
+{
+  "weights": {
+    "performance": 0.5263157894736842,
+    "premios": 0.21052631578947367,
+    "playoff": 0.18947368421052632,
+    "winrate": 0.07368421052631578
+  },
+  "epa_norm_floor": 1250.0,
+  "epa_norm_ceil": 2000.0,
+  "opr_blend": 0.15,
+  "award_k": 0.55,
+  "tier_weight": {
+    "S": 1.0,
+    "A": 0.7,
+    "B": 0.45,
+    "C": 0.25
+  },
+  "champs_award_mult": 2.0,
+  "world_attendance_bonus": 2.0,
+  "world_result_bonus_max": 8.0,
+  "world_playoff_bands": {
+    "none": [
+      0.0,
+      0.29
+    ],
+    "playoff": [
+      0.3,
+      0.44
+    ],
+    "round3": [
+      0.45,
+      0.54
+    ],
+    "round4": [
+      0.55,
+      0.64
+    ],
+    "sf": [
+      0.65,
+      0.79
+    ],
+    "finalist": [
+      0.8,
+      0.94
+    ],
+    "winner": [
+      0.95,
+      1.0
+    ]
+  },
+  "playoff_score": {
+    "winner": 0.9,
+    "finalist": 0.8,
+    "sf": 0.6,
+    "round4": 0.45,
+    "round3": 0.35,
+    "playoff": 0.25,
+    "none": 0.0
+  },
+  "alliance_role_bonus": {
+    "0": 0.1,
+    "1": 0.06,
+    "2": 0.03,
+    "3": 0.01
+  },
+  "alliance_role_quality": {
+    "0": 1.0,
+    "1": 0.6,
+    "2": 0.3,
+    "3": 0.1
+  }
+}

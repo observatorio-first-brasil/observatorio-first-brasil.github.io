@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feedback · Observatório FIRST Brasil</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">FIRST</span><div><strong>Observatório FIRST Brasil</strong><small>Feedback do portal</small></div></div>
+    <nav id="nav"><a href="../">← Início</a><a href="../frc/">FRC</a><a href="../ftc/">FTC</a></nav>
+  </header>
+  <main class="feedback-page">
+    <section class="card feedback-card">
+      <h1>Ajude a melhorar o Observatório</h1>
+      <p class="muted">Envie uma correção de dados, sugestão ou comentário sobre o portal. Ao continuar, seu aplicativo de e-mail abrirá com a mensagem pronta para envio.</p>
+      <form id="feedback-form">
+        <div class="two-col">
+          <label class="fld">Nome <input type="text" name="name" autocomplete="name" /></label>
+          <label class="fld">Seu e-mail <input type="email" name="email" autocomplete="email" /></label>
+          <label class="fld">Programa
+            <select name="program"><option>Portal geral</option><option>FRC</option><option>FTC</option></select>
+          </label>
+          <label class="fld">Tipo de feedback
+            <select name="category"><option>Correção de dados</option><option>Sugestão</option><option>Problema técnico</option><option>Metodologia</option><option>Outro</option></select>
+          </label>
+        </div>
+        <label class="fld feedback-message">Mensagem <textarea name="message" required rows="8" placeholder="Descreva o feedback com o máximo de contexto possível."></textarea></label>
+        <button type="submit">Preparar e-mail de feedback</button>
+        <p class="muted privacy-note">O portal não armazena os dados deste formulário. O envio só acontece depois que você confirmar no seu aplicativo de e-mail.</p>
+      </form>
+    </section>
+  </main>
+  <footer>
+    Feedback destinado à equipe responsável pelo Observatório FIRST Brasil.
+    <div class="stemos-signature">
+      <span>O Observatório FIRST Brasil é uma ferramenta da stemOS para a comunidade de robótica do Brasil.</span>
+      <a href="https://stemos.com.br/" target="_blank" rel="noopener" aria-label="Site da stemOS"><img src="../assets/stemos-logo.png" alt="stemOS" /></a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("feedback-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = `[Observatório FIRST Brasil] ${data.get("program")} · ${data.get("category")}`;
+      const body = [
+        `Nome: ${data.get("name") || "Não informado"}`,
+        `E-mail para retorno: ${data.get("email") || "Não informado"}`,
+        `Área: ${data.get("program")}`,
+        `Tipo: ${data.get("category")}`,
+        "",
+        String(data.get("message") || ""),
+        "",
+        `Página de origem: ${document.referrer || "acesso direto"}`,
+      ].join("\n");
+      location.href = `mailto:filipe@stemos.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>

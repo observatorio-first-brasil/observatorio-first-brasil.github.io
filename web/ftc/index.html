@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Observatório FIRST Brasil · FTC</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="../css/styles.css?v=ftc1" />
+</head>
+<body class="ftc">
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">FTC</span>
+    <div>
+      <strong>Observatório FIRST Brasil</strong>
+      <small>Equipes FTC do Brasil · 2022–23 a 2025–26</small>
+    </div>
+  </div>
+  <nav id="nav">
+    <a href="../">← Início</a>
+    <a data-route="overview" href="#/overview">Visão geral</a>
+    <a data-route="events" href="#/events">Eventos</a>
+    <a data-route="team" href="#/team">Equipe</a>
+    <a data-route="state" href="#/state">Estado</a>
+    <a data-route="compare" href="#/compare">Comparar</a>
+    <a data-route="method" href="#/method">Metodologia</a>
+    <a href="../feedback/">Feedback</a>
+  </nav>
+  <div class="meta" id="meta"></div>
+</header>
+
+<main id="app"><div class="loading">carregando dados…</div></main>
+
+<footer>
+  <span id="foot-generated"></span>
+  Fonte: <a href="https://ftcscout.org/api" target="_blank" rel="noopener">FTCScout</a> · OPR, resultados e prêmios.
+  Índice FTC independente do FRC · <a href="#/method">Metodologia</a>.
+  <div class="stemos-signature">
+    <span>O Observatório FIRST Brasil é uma ferramenta da stemOS para a comunidade de robótica do Brasil.</span>
+    <a href="https://stemos.com.br/" target="_blank" rel="noopener" aria-label="Site da stemOS"><img src="../assets/stemos-logo.png" alt="stemOS" /></a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script type="module" src="../js/app.js"></script>
+</body>
+</html>
